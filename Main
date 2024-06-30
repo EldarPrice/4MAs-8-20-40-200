@@ -1,0 +1,14 @@
+//@version=5
+indicator(title="4MAs 8/20/40/200", shorttitle="8MA", overlay=true)
+
+len1 = input(8, title="Length")
+len2 = input(20, title="Length")
+len3 = input(40, title="Length")
+len4 = input(200, title="Length")
+
+src = input(close, title="Source")
+
+plot(ta.sma(src, len1), color=#ffffff, title="8(MA)")
+plot(ta.sma(src, len2), color=#00eeff, title="20(MA)")
+plot(ta.sma(src, len3), color=#e5ff00, title="40(MA)")
+plot(ta.sma(src, len4), color=#ff0000, title="200(MA)")
